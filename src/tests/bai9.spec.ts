@@ -21,8 +21,9 @@ import { test, expect } from '@playwright/test';
 
   test('Kiểm tra click đăng ký ngay gói Combo sky', async ({ page }) => {
     await page.goto('https://staging.tongdaiwifi.vn');
-    const card2 = await page.locator('[class="relative select-none"]').nth(0);
-    const registerButton = await card2.getByRole('link', { name: 'Đăng ký ngay' });
+    const card2 = await page.locator('[class="relative select-none"]').first();
+
+    const registerButton = await card2.getByText('Combo Giga').getByRole('link', { name: 'Đăng ký ngay' });
     await registerButton.click();
 });
 
