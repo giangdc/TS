@@ -1,6 +1,6 @@
 import test, { expect } from "@playwright/test";
 
-    test("Bai10_ Kiểm tra URL toBeVisible toBeChecked", async ({ page }) => {
+    test("Bai11_ Kiểm tra URL toBeVisible toBeChecked", async ({ page }) => {
     await page.goto("https://staging.tongdaiwifi.vn");
     const card= page.locator("[role='group'][data-slot='carousel-item']").filter({ hasText: "Gói giga" }).getByRole("link", { name: "Đăng ký ngay" });
     await card.click();
