@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npx playwright *)",
+      "Bash(mount)",
+      "Bash(ln -s package.json /run/media/giangdc2/DISK1_VOL1/AI/playwright-ts/__symtest)",
+      "Bash(rm -f /run/media/giangdc2/DISK1_VOL1/AI/playwright-ts/__symtest)",
+      "Bash(node *)",
+      "Bash(mkdir -p ~/AI)",
+      "Bash(rsync -a --exclude=node_modules --exclude=package-lock.json /run/media/giangdc2/DISK1_VOL1/AI/playwright-ts/ ~/AI/playwright-ts/)",
+      "Bash(echo \"EXIT=$?\")",
+      "Read(//home/giangdc2/AI/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Add Tracking_QC Artifacts.xlsx *)"
+    ]
+  }
+}
