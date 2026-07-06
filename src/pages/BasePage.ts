@@ -32,4 +32,8 @@ export abstract class BasePage {
   async scrollIntoView(locator: Locator): Promise<void> {
     await locator.scrollIntoViewIfNeeded();
   }
+
+  errorMessage(message: string): Locator {
+    return this.page.getByText(message);
+  }
 }
