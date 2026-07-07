@@ -13,14 +13,14 @@ export class LoginPage extends BasePage {
   private readonly username: Locator;
   private readonly password: Locator;
   private readonly loginButton: Locator;
-  private readonly errorMessage: Locator;
+ //// private readonly errorMessage: Locator;
 
   constructor(page: Page) {
     super(page);
     this.username = page.getByPlaceholder('Username');
     this.password = page.getByPlaceholder('Password');
     this.loginButton = page.getByRole('button', { name: 'Login' });
-    this.errorMessage = page.locator('[data-test="error"]');
+    //// this.errorMessage = page.locator('[data-test="error"]');
   }
 
   async open(): Promise<void> {
@@ -33,7 +33,7 @@ export class LoginPage extends BasePage {
     await this.loginButton.click();
   }
 
-  async getError(): Promise<string> {
-    return (await this.errorMessage.textContent()) || '';
-  }
+  //async getError(): Promise<string> {
+  //  return (await this.errorMessage.textContent()) || '';
+  //}
 }

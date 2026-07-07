@@ -5,7 +5,7 @@ import { B1_thongtindangky } from "../pages/B1_thongtindangky";
 
 test.describe("Bai12_ Kiểm tra URL toBeVisible toBeChecked", () => {
   test("Bai12_ Kiểm tra URL toBeVisible toBeChecked", async ({ page }) => {
-    await page.goto("https://staging.tongdaiwifi.vn");
+    await page.goto("/");
 
     const homepage = new Homepage(page);
     await homepage.clickGigaCard();
