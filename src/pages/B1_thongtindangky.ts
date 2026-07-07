@@ -15,7 +15,7 @@ export class B1_thongtindangky extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.Hoten = page.getByRole('textbox', { name: 'Họ tên*' });
+    this.Hoten = page.getByRole('textbox', { name: 'Hsọ tên*' });
     this.Sodienthoai = page.getByRole('textbox', { name: 'Số điện thoại*' });
     this.Chontinhthanhpho = page.getByRole('button', { name: 'Chọn tỉnh thành phố' });
     this.Nhapthongtin = page.getByRole('textbox', { name: 'Nhập thông tin' });

@@ -25,7 +25,12 @@ export default defineConfig({
     navigationTimeout: 30_000,
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    { name: 'chromium', 
+      use: { ...devices['Desktop Chrome'] } ,
+      dependencies: ["setup"], 
+    },
+    { name: "setup", testMatch: /.*\.setup\.ts/ },
+
     // Mở thêm khi cần kiểm thử đa trình duyệt:
     // { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
     // { name: 'webkit',  use: { ...devices['Desktop Safari'] } },
